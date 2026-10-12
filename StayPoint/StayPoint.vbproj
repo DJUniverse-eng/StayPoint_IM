@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DADB9572-4A43-4F5B-9E9B-26DD61ADEF04}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>StayPoint.My.MyApplication</StartupObject>
+    <RootNamespace>StayPoint</RootNamespace>
+    <AssemblyName>StayPoint</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>StayPoint.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>StayPoint.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.6.2\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.35.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.35.0\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=26.7.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.26.7.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.6.0\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=10.0.0.8, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.10.0.8\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.6.0\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.6.0\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="ZstdSharp, Version=0.8.8.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZstdSharp.Port.0.8.8\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dbconnection.vb" />
+    <Compile Include="FrmAdminDashboard.Designer.vb">
+      <DependentUpon>FrmAdminDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAdminDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStaffDashboard.Designer.vb">
+      <DependentUpon>FrmStaffDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStaffDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PasswordSecurity.vb" />
+    <Compile Include="ucBookings.Designer.vb">
+      <DependentUpon>ucBookings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucBookings.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCheckInOut.Designer.vb">
+      <DependentUpon>ucCheckInOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucCheckInOut.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDashboard.Designer.vb">
+      <DependentUpon>ucDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucDashboard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucGuests.Designer.vb">
+      <DependentUpon>ucGuests.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucGuests.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucParking.Designer.vb">
+      <DependentUpon>ucParking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucParking.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPayments.Designer.vb">
+      <DependentUpon>ucPayments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucPayments.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucReports.Designer.vb">
+      <DependentUpon>ucReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucReports.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucRoomAssignment.Designer.vb">
+      <DependentUpon>ucRoomAssignment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucRoomAssignment.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucRooms.Designer.vb">
+      <DependentUpon>ucRooms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucRooms.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucStaffBookings.Designer.vb">
+      <DependentUpon>ucStaffBookings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucStaffBookings.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucStaffCheckInOut.Designer.vb">
+      <DependentUpon>ucStaffCheckInOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucStaffCheckInOut.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucStaffGuestSearch.Designer.vb">
+      <DependentUpon>ucStaffGuestSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucStaffGuestSearch.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucStaffHome.Designer.vb">
+      <DependentUpon>ucStaffHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucStaffHome.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucStaffManagement.Designer.vb">
+      <DependentUpon>ucStaffManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucStaffManagement.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucStaffParking.Designer.vb">
+      <DependentUpon>ucStaffParking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucStaffParking.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucStaffPayments.Designer.vb">
+      <DependentUpon>ucStaffPayments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucStaffPayments.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSystemSettings.Designer.vb">
+      <DependentUpon>ucSystemSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ucSystemSettings.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmAdminDashboard.resx">
+      <DependentUpon>FrmAdminDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStaffDashboard.resx">
+      <DependentUpon>FrmStaffDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucBookings.resx">
+      <DependentUpon>ucBookings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucCheckInOut.resx">
+      <DependentUpon>ucCheckInOut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucDashboard.resx">
+      <DependentUpon>ucDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucGuests.resx">
+      <DependentUpon>ucGuests.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucParking.resx">
+      <DependentUpon>ucParking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPayments.resx">
+      <DependentUpon>ucPayments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucReports.resx">
+      <DependentUpon>ucReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucRooms.resx">
+      <DependentUpon>ucRooms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucStaffManagement.resx">
+      <DependentUpon>ucStaffManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSystemSettings.resx">
+      <DependentUpon>ucSystemSettings.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
